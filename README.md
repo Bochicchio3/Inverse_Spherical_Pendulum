@@ -48,25 +48,25 @@ There are multiple ways to parametrize the state, but the main choiche is wether
 In this case the state would be:
 
 <!-- $$q(t)=\{\theta_r,\theta_l,\psi,\phi,x,y,\theta\}$$ -->
-![](2020-06-16-00-50-54.png)
+![](./images/2020-06-16-00-50-54.png)
 In this case it would be easier to compute the direct kinematic as many quantities would be related directly to $x$ and $y$.
 
 If a system is parametrized with m $m$ coordinates but only has $n(n<m)$ dof; then, there should exist $p=m−n$ constraints which allow the reduction of the order of the system from m to n; in others words, if we choose n independent joint variables there must exist p dependent joint variables.
 
-![](2020-06-16-00-51-07.png)
+![](./images/2020-06-16-00-51-07.png)
 
 
 In this case the constraints is a non slip non differentiable constraint, which will be modelled in the next section.
 ### No slip condition and Non holonomic constraints
 
  <!-- The constraints are rolling without slipping for the two wheels. This results in $x,y$ and $\theta$ being excluded from the state and only related to $\theta_r, \theta_l$ with the following relationship: -->
-![](2020-06-16-01-04-31.png)
+![](./images/2020-06-16-01-04-31.png)
 <!-- $$\theta =\frac{r (\theta_r(t)-   \theta_l(t)}{l_{a}}$$
 
 $$\dot x=\frac{r \cos (\theta ) (\dot     {\theta} r(t)-\dot{\theta}l(t))}{2} $$
 
 $$\dot y=\frac{r \sin (\theta ) (\dot     {\theta} r(t)-\dot{\theta}l(t))}{2} $$ -->
-![](2020-06-16-00-52-56.png)
+![](./images/2020-06-16-00-52-56.png)
 ### Minimal State representation
 
 Explicitly modelling the constraints allows a minimal state representation. In this case the configuration would be:
@@ -77,10 +77,10 @@ $$\theta_r(t):\text{left wheel}                                 $$
 $$\theta_{l}(t): \text{right wheel}                             $$
 $$\psi (t): \text{X rotation in the XYZ parametrization}        $$
 $$\phi (t): \text{Y rotation in the XYZ parametrization}        $$ -->
-![](2020-06-16-00-53-11.png)
+![](./images/2020-06-16-00-53-11.png)
 So that the resulting minimal representation is:
 
-![](2020-06-16-00-53-19.png)
+![](./images/2020-06-16-00-53-19.png)
 <!-- 
 $$q(t)=\left\{\theta_r(t),\theta_l(t),\psi (t),\phi (t)\right\}$$
 
@@ -96,13 +96,13 @@ Just for reference, the used parameters:
 <!-- 
 $$G\to 9.81,m_p\to 1      ,m_a\to 1      ,m_r\to 0.5    ,l_p\to 0.7    ,l_a\to 1      ,r\to 0.3            ,I_a\to 0.8$$ -->
 
-![](2020-06-16-00-53-35.png)
+![](./images/2020-06-16-00-53-35.png)
 
 
 ### Direct Kinematics
 
 The direct kinematics problem consists in finding expressions for the pose (i.e., position and orientation) variables of an element of interest of the system, described by the vector x in terms of the actuated joint variables; this can be expressed as
-![](2020-06-16-00-54-00.png)
+![](./images/2020-06-16-00-54-00.png)
 <!-- $$x=f(q,β(q))$$
 	
 
@@ -129,7 +129,7 @@ The inverse kinematics problem can be solved in general form by geometric or ana
 
 The following quantities need to be defined to compute the terms necessary for the lagrangian formulation of the equations of motion:
 
-![](2020-06-16-00-54-33.png)
+![](./images/2020-06-16-00-54-33.png)
 <!-- - $O$ center of the wheels axis $\{$ $x,y,0\}$ 
 - $OP$ center of mass of the pendulum
 - $v_{rl}$: velocity of the center of mass of the left wheel
@@ -143,7 +143,7 @@ The following quantities need to be defined to compute the terms necessary for t
 - $\theta$: velocity of the center of mass of the left wheel
   -->
 The velocity of the wheels are easy to obtain from state coordinates through the no slip condition:
-![](2020-06-16-00-55-00.png)
+![](./images/2020-06-16-00-55-00.png)
 <!-- $$ v_a=\{ \dot x, \dot y, 0\}^T$$
 
  $$v_{rl}=r  \dot{\theta}_l(t);$$
@@ -172,9 +172,9 @@ $$E_{wl2}=\frac{w_{rr}J_{r}    w_{rr}}{2}$$
 $$E_{wr2}=\frac{w_{rl} J_{r}   w_{rl}}{2}$$
 $$E_{wl1}=\frac{m_{r}  v_{rr}^2}{2}; $$
 $$E_{wr1}=\frac{m_{r}  v_{rl}^2}{2}$$ -->
-![](2020-06-16-00-55-19.png)
+![](./images/2020-06-16-00-55-19.png)
 ### Potential Energy and Lagrangian
-![](2020-06-16-00-55-28.png)
+![](./images/2020-06-16-00-55-28.png)
 <!-- $$ mpgz_p $$
 
 $$ L=E_{tot}-U $$ -->
@@ -187,12 +187,12 @@ In this case I tried to simulate the system starting near the upright position, 
 <!-- $$ \frac{\partial }{\partial t}\frac{\partial L}{\partial \text{qd}(t)}-\frac{\partial L}{\partial q(t)}=\tau_q$$
 
 $$\tau_q=\{0, 0,0,0,\tau_r, \tau_l,0 ,0\}^T$$  -->
-![](./images/pendulum.gif)
+![](./images/./images/pendulum.gif)
 
 
 
 ### Controllability and Accessibility
-![](2020-06-16-01-10-49.png)
+![](./images/2020-06-16-01-10-49.png)
 <!-- The controllability of the non linear system can be analyzed starting from the Chow's theorem, that states: A system is small time locally accessile in $x_0 \in \mathbb{R} ^n$ if, given the system  -->
 
 <p align="center"><img align="Center" src="images/2020-06-04-15-48-59.png" alt="drawing" class="center" width="300"/></p>
@@ -200,7 +200,7 @@ $$\tau_q=\{0, 0,0,0,\tau_r, \tau_l,0 ,0\}^T$$  -->
 and the distributions: 
 
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-21.png" alt="drawing" class="center" width="190"/></p>
-![](2020-06-16-01-11-12.png)
+![](./images/2020-06-16-01-11-12.png)
 <!-- the smallest $\Delta$-invariant containing+ $\Delta_0$, which is $< \Delta | \Delta_0>$, has dimensions $n$ in $x_0$.
 The dimensions of  $< \Delta | \Delta_0>$ can be computed using the filtration procedure, for which the following quantity must be computed iteratively: -->
 
@@ -210,20 +210,20 @@ where  $[\Delta_i, \Delta]$ represent the Lie Bracket between the vector fields 
 
 In my system: 
 
-![](2020-06-16-01-12-40.png)
+![](./images/2020-06-16-01-12-40.png)
 
-![](2020-06-16-01-12-54.png)
+![](./images/2020-06-16-01-12-54.png)
 
 <!-- Applying the filtration procedure to these distributions, which has been implemented symbolically in Wolfram Mathematica, I can compute the dimension of the $\Delta_k$. The dimension of $\Delta_2$ is 8 in the pendulum upright position (interest point for the system), meaning that the sistem is small time locally accessible. -->
-![](2020-06-16-01-15-33.png)
+![](./images/2020-06-16-01-15-33.png)
 
 The distributions are not represented here for clarity, as the symbolic output is too big to be visualized correctly in Mathematica.
 
 ### Osservability
-![](2020-06-16-01-19-01.png)
+![](./images/2020-06-16-01-19-01.png)
 <!-- To study the observability of a system there are three different approaches.. Analougously to the controllability case, a filtration procedure between the co-distribution $\Omega_0 = \frac{\partial h(x)}{\partial x}$ and the distribution $\Delta = span\{f(x), g_1(x),...,g_m(x)\}$ 
 \\ -->
-![](2020-06-16-01-21-35.png)
+![](./images/2020-06-16-01-21-35.png)
 <!-- The procedure is identical in this case, except for the fact that the Lie Bracket is now between a covector field $\Omega_k$ and the vector fields $\Delta$
 
 
@@ -233,25 +233,40 @@ Using the implemented algorithm on the systems distributions the dimension of  $
 
 The standart theory for MIMO feedback linearization for a non linear square system is here reviewed. 
 
-Given the system:
+Given the affine in control MIMO system:
 
 
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-21.png" alt="drawing" class="center" width="200"/></p>
-<p align="center"><img align="Center" src="images/2020-06-04-11-51-42.png" alt="drawing" class="center" width="500"/></p>
+
+The outputs can be derived untill the inputes are explicitly found:
+<p align="center"><img align="Center" src="images/2020-06-04-11-51-42.png" alt="drawing" class="center" width="1000"/></p>
+Considering only the higher order derivatives of the ouputs, the terms can be rearranged in the following system:
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-50.png" alt="drawing" class="center" width="500"/></p>
+Which can be rewritten in the compact form:
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-58.png" alt="drawing" class="center" width="150"/></p>
+
+A coordinate transformation is thus found. The first r coordinates are:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-03.png" alt="drawing" class="center" width="200"/></p>
+While other n-r independent coordinates must be found to complete the coordinate transformation:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-10.png" alt="drawing" class="center" width="180"/></p>
+The coordinate change is now complete, and the new variables in which the dynamic is written are:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-17.png" alt="drawing" class="center" width="130"/></p>
+
+The feedback linearization problem can now be reduced to finding 
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-26.png" alt="drawing" class="center" width="400"/></p>
+such that using the following input:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-35.png" alt="drawing" class="center" width="170"/></p>
+The dynamics in the new variables is linear:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-42.png" alt="drawing" class="center" width="150"/></p>
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-48.png" alt="drawing" class="center" width="400"/></p>
+Choosing carefully the gains of the new "virtual" input makes the new linear system asyntotically stable.
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-54.png" alt="drawing" class="center" width="350"/></p>
+The resulting zero dynamics (the dynamics of the remaining variables) will be:
 <p align="center"><img align="Center" src="images/2020-06-04-11-52-59.png" alt="drawing" class="center" width="300"/></p>
 
 
-In this case the two outputs chosen for feedback linearization are the two angles: $\phi$ and $\psi$.
+<!-- In this case the two outputs chosen for feedback linearization are the two angles: $\phi$ and $\psi$. -->
+![](2020-06-16-01-35-07.png)
 <!-- 
 - $\psi$
 - $\phi$ -->
