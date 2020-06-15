@@ -49,9 +49,9 @@ In this case the state would be:
 
 <!-- $$q(t)=\{\theta_r,\theta_l,\psi,\phi,x,y,\theta\}$$ -->
 ![](./images/2020-06-16-00-50-54.png)
-In this case it would be easier to compute the direct kinematic as many quantities would be related directly to $x$ and $y$.
+In this case it would be easier to compute the direct kinematic as many quantities would be related directly to x and y.
 
-If a system is parametrized with m $m$ coordinates but only has $n(n<m)$ dof; then, there should exist $p=m−n$ constraints which allow the reduction of the order of the system from m to n; in others words, if we choose n independent joint variables there must exist p dependent joint variables.
+If a system is parametrized with m m coordinates but only has n (n < m ) dof; then, there should exist p=m−n constraints which allow the reduction of the order of the system from m to n; in others words, if we choose n independent joint variables there must exist p dependent joint variables.
 
 ![](./images/2020-06-16-00-51-07.png)
 
