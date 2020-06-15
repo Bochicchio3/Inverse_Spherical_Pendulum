@@ -17,6 +17,8 @@
     - [Controllability and Accessibility](#controllability-and-accessibility)
     - [Osservability](#osservability)
     - [Feedback Linearization in MIMO systems](#feedback-linearization-in-mimo-systems)
+    - [Feedback Linearization for the Spherical Inverted Pendulum](#feedback-linearization-for-the-spherical-inverted-pendulum)
+    - [Results](#results)
 
 
 <p align="center">
@@ -187,7 +189,7 @@ In this case I tried to simulate the system starting near the upright position, 
 <!-- $$ \frac{\partial }{\partial t}\frac{\partial L}{\partial \text{qd}(t)}-\frac{\partial L}{\partial q(t)}=\tau_q$$
 
 $$\tau_q=\{0, 0,0,0,\tau_r, \tau_l,0 ,0\}^T$$  -->
-![](./images/./images/pendulum.gif)
+![](./images/pendulum.gif)
 
 
 
@@ -236,10 +238,10 @@ The standart theory for MIMO feedback linearization for a non linear square syst
 Given the affine in control MIMO system:
 
 
-<p align="center"><img align="Center" src="images/2020-06-04-11-51-21.png" alt="drawing" class="center" width="200"/></p>
+<p align="center"><img align="Center" src="images/2020-06-04-11-51-21.png" alt="drawing" class="center" width="250"/></p>
 
 The outputs can be derived untill the inputes are explicitly found:
-<p align="center"><img align="Center" src="images/2020-06-04-11-51-42.png" alt="drawing" class="center" width="1000"/></p>
+<p align="center"><img align="Center" src="images/2020-06-04-11-51-42.png" alt="drawing" class="center" width="500"/></p>
 Considering only the higher order derivatives of the ouputs, the terms can be rearranged in the following system:
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-50.png" alt="drawing" class="center" width="500"/></p>
 Which can be rewritten in the compact form:
@@ -267,17 +269,19 @@ The resulting zero dynamics (the dynamics of the remaining variables) will be:
 
 <!-- In this case the two outputs chosen for feedback linearization are the two angles: $\phi$ and $\psi$. -->
 ![](2020-06-16-01-35-07.png)
-<!-- 
-- $\psi$
-- $\phi$ -->
+
+### Feedback Linearization for the Spherical Inverted Pendulum
+
+This section of the report must still be completed
+
+### Results
+
+This section of the report must still be completed
+
+<p align="center"><img align="Center" src="2020-06-16-01-39-15.png" alt="drawing" class="center" width="300"/></p>
 
 
-
-
-
-
-
-
+<p align="center"><img align="Center" src="2020-06-16-01-38-50.png" alt="drawing" class="center" width="700"/></p>
 
 
 
