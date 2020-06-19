@@ -206,14 +206,14 @@ and the distributions:
 
 <p align="center"><img align="Center" src="images/2020-06-04-11-51-21.png" alt="drawing" class="center" width="190"/></p>
 
-![](2020-06-16-01-46-10.png)
+![](./images/2020-06-16-01-46-10.png)
 
 <!-- the smallest $\Delta$-invariant containing+ $\Delta_0$, which is $< \Delta | \Delta_0>$, has dimensions $n$ in $x_0$.
 The dimensions of  $< \Delta | \Delta_0>$ can be computed using the filtration procedure, for which the following quantity must be computed iteratively: -->
 
 <p align="center"><img align="Center" src="images/2020-06-04-15-49-28.png" alt="drawing" class="center" width="230"/></p>
 
-![](2020-06-16-01-45-26.png)
+![](./images/2020-06-16-01-45-26.png)
 <!-- where  $[\Delta_i, \Delta]$ represent the Lie Bracket between the vector fields of the two distributions. The procedure is arrested when k is found such that the two distributions $\Delta_k$ e $\Delta_{k+1}$ are non singular in $x_0$ and $\dim \Delta_k(x_0) = \dim \Delta_{k+1}(x_0)$. -->
 
 In my system: 
@@ -274,7 +274,7 @@ The resulting zero dynamics (the dynamics of the remaining variables) will be:
 
 
 <!-- In this case the two outputs chosen for feedback linearization are the two angles: $\phi$ and $\psi$. -->
-![](2020-06-16-01-35-07.png)
+![](./images/2020-06-16-01-35-07.png)
 
 
 ### MIMO Feedback Linearization for the Spherical Inverted Pendulum
@@ -285,42 +285,42 @@ On the left, the system in affine form is presented.
 At the bottom, we have the chosen Input, Output and the resulting g matrix.
 
 
-![](2020-06-19-09-19-30.png)
+![](./images/2020-06-19-09-19-30.png)
 
 The procedure starts with taking the Lie Brackets of f with respects to the Inputs, untill the input is present.
 Deriving two times, we see that only one of the input is in the Lie Brackets:
-![](2020-06-19-09-36-49.png)
+![](./images/2020-06-19-09-36-49.png)
 
 This is the same thing that happens with the unicycle, and the physical explanation is that while the sum of the torques at the two wheels determines an immediate effect on the dynamics, the difference if the torque is responsible for the steering, which enters the dynamics with a delay.
 
 The same "trick" that is done in the unicycle system is useful here: State Augmentation. By introducing a new variable into the state and modifying the input to be the derivative of that variable solves the problems, and the state thus become:
 
-![](2020-06-19-09-39-22.png)
+![](./images/2020-06-19-09-39-22.png)
 
 At this point, the Lie Bracket can be succesfully computed and contains both the inputs. 
 
 
-<p align="center"><img align="Center" src="2020-06-19-10-25-02.png" alt="drawing" class="center" width="600"/></p>
+<p align="center"><img align="Center" src="images/2020-06-19-10-25-02.png" alt="drawing" class="center" width="600"/></p>
 
 
-<p align="center"><img align="Center" src="2020-06-19-10-25-59.png" alt="drawing" class="center" width="600"/></p>
+<p align="center"><img align="Center" src="images/2020-06-19-10-25-59.png" alt="drawing" class="center" width="600"/></p>
 
 The outputs derivative explicit formulations is therefore:
 
 
-<p align="center"><img align="Center" src="2020-06-19-10-27-01.png" alt="drawing" class="center" width="600"/></p>
+<p align="center"><img align="Center" src="images/2020-06-19-10-27-01.png" alt="drawing" class="center" width="600"/></p>
 
 The system can be written in compact form:
 
-<p align="center"><img align="Center" src="2020-06-19-10-27-50.png" alt="drawing" class="center" width="600"/></p>
+<p align="center"><img align="Center" src="images/2020-06-19-10-27-50.png" alt="drawing" class="center" width="600"/></p>
 
 The coordinate change so far is: 
-![](2020-06-19-10-45-54.png)
+![](./images/2020-06-19-10-45-54.png)
 
 In order to find the other three coordinates there are two options.
 These are:
 
-![](2020-06-19-10-48-14.png)
+![](./images/2020-06-19-10-48-14.png)
 
 The first one is chosen, so that the zero dynamics is independent from the input.
 
@@ -328,26 +328,25 @@ The first one is chosen, so that the zero dynamics is independent from the input
 
 Now that we have a valid coordinate transformation the new system can be written and the linearizing input can be found. Choosing proper gains for the linear system we have:
 
-![](2020-06-19-10-47-30.png)
+![](./images/2020-06-19-10-47-30.png)
 
 
 #### Zero Dynamics and Linear System preliminary analysis
 
 By using the previously found input and solving the system dynamics in a ode solver for near upright pendulum initial position we can study the dynamics of the Linear System (asymptotically stable, on the left), and the zero dynamics (on which we have no control).
 
-![](2020-06-19-10-49-30.png)
+![](./images/2020-06-19-10-49-30.png)
 
 ### Results
 
 
-
-![](2020-06-19-10-50-18.png)
+![](./images/2020-06-19-10-50-18.png)
 
 ### Different Initial Contidions
 
 The pendulum is stabilized in the upright position regardless of the initial conditions.
 
-<p align="center"><img align="Center" src="2020-06-16-01-38-50.png" alt="drawing" class="center" width="700"/></p>
+<p align="center"><img align="Center" src="images/2020-06-16-01-38-50.png" alt="drawing" class="center" width="700"/></p>
 
 However, with the current approach, we don't have any control on the x-y position of the pendulum and technically we can't bring the pendulum in upright position if it starts in the down position.
 
