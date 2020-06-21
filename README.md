@@ -23,6 +23,7 @@
     - [Results](#results)
     - [Different Initial Contidions](#different-initial-contidions)
     - [Conclusions and Improvements](#conclusions-and-improvements)
+    - [Appendix A: Code Structure](#appendix-a-code-structure)
 
 
 <p align="center">
@@ -357,7 +358,7 @@ The pendulum is stabilized in the upright position regardless of the initial con
 
 The system is now simulated with the following initial conditions:
 
-![](2020-06-22-00-52-24.png)
+![](./images/2020-06-22-00-52-24.png)
 <p align="center"><img align="Center" src="images/pendulum5.gif" alt="drawing" class="center" width="700"/></p>
 <p align="center"><img align="Center" src="images/pendulum6.gif" alt="drawing" class="center" width="700"/></p>
 
@@ -385,3 +386,66 @@ Having modelled both a 2D double inverted pendulum and the Spherical Inverted Pe
 
 This really gives an hint on how difficult is to control real time complex system that requires heavy 3D computations such as Humanoids and Quadruped robots.
 
+### Appendix A: Code Structure
+
+The code structure will here be quickly commented and only the less obvious will be commented more in detail:
+
+All the sections have a structure similar to these:
+
+- Initialization: where the minimal state representation is initialized
+
+![](./images/2020-06-22-01-31-09.png)
+
+-Constraints Modelling:
+
+![](./images/2020-06-22-01-32-19.png)
+
+![](./images/2020-06-22-01-32-32.png)
+
+![](./images/2020-06-22-01-33-20.png)
+
+In the following section the non linear algorithms necessary to compute the filtration procedure and all the operations (Lie Bracket between vectors, scalars and covectors) have been implemented and tested on simpler system before using them on the real 3D Spherical Inverted Pendulum.
+
+The implementations are in the form:
+
+![](./images/2020-06-22-01-34-33.png)
+
+![](./images/2020-06-22-01-34-44.png)
+
+- Non Linear System Analysis, where the affine control form is defined: 
+
+![](./images/2020-06-22-01-35-45.png)
+
+And where the quantities for the filtration procedure are computed:
+
+![](./images/2020-06-22-01-36-20.png)
+
+With the results:
+
+![](./images/2020-06-22-01-36-34.png)
+
+
+- The Feedback Linearization section:
+![](./images/2020-06-22-01-40-11.png)
+
+With the coordinate change:
+
+![](./images/2020-06-22-01-37-26.png)
+
+And the feedback linearizing input computation:
+
+![](./images/2020-06-22-01-37-48.png)
+
+
+- Equations of Motion solution
+
+![](./images/2020-06-22-01-38-41.png)
+
+![](./images/2020-06-22-01-38-48.png)
+
+
+- And Finally, the 3D Simulation
+
+![](./images/2020-06-22-01-39-36.png)
+
+![](./images/2020-06-22-01-39-25.png)
