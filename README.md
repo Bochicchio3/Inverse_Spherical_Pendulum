@@ -23,7 +23,7 @@
     - [Results](#results)
     - [Different Initial Contidions](#different-initial-contidions)
     - [Conclusions and Improvements](#conclusions-and-improvements)
-    - [Appendix A: Code Structure](#appendix-a-code-structure)
+- [Appendix A: Code Structure](#appendix-a-code-structure)
 
 
 <p align="center">
@@ -386,7 +386,7 @@ Having modelled both a 2D double inverted pendulum and the Spherical Inverted Pe
 
 This really gives an hint on how difficult is to control real time complex system that requires heavy 3D computations such as Humanoids and Quadruped robots.
 
-### Appendix A: Code Structure
+# Appendix A: Code Structure
 
 The code structure will here be quickly commented and only the less obvious will be commented more in detail:
 
