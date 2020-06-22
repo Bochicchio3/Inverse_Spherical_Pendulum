@@ -183,7 +183,7 @@ $$E_{wr1}=\frac{m_{r}  v_{rl}^2}{2}$$ -->
 <!-- $$ mpgz_p $$
 
 $$ L=E_{tot}-U $$ -->
-<p align="center"><img align="Center" src="2020-06-22-00-33-12.png" alt="drawing" class="center" width="450"/></p>
+<p align="center"><img align="Center" src="./images/2020-06-22-00-33-12.png" alt="drawing" class="center" width="450"/></p>
 
 ### Equations of motion and Free motion simulation
 The symbolic form for the equations of motion is not reported here as they would require too much space. A full symbolic formulation can be found in the Wolfram Notebook under the variable DynLeftTerm [[5:9]]
